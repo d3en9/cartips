@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A47C60CF2869EED800061D2D /* carnetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47C60CE2869EED800061D2D /* carnetApp.swift */; };
+		A47C60D12869EED800061D2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47C60D02869EED800061D2D /* ContentView.swift */; };
+		A47C60D32869EEDC00061D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A47C60D22869EEDC00061D2D /* Assets.xcassets */; };
+		A47C60D62869EEDC00061D2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A47C60D52869EEDC00061D2D /* Preview Assets.xcassets */; };
+		A47C60E02869EEDD00061D2D /* carnetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47C60DF2869EEDD00061D2D /* carnetTests.swift */; };
+		A47C60EA2869EEDD00061D2D /* carnetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47C60E92869EEDD00061D2D /* carnetUITests.swift */; };
+		A47C60EC2869EEDD00061D2D /* carnetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47C60EB2869EEDD00061D2D /* carnetUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A47C60DC2869EEDD00061D2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A47C60C32869EED800061D2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A47C60CA2869EED800061D2D;
+			remoteInfo = carnet;
+		};
+		A47C60E62869EEDD00061D2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A47C60C32869EED800061D2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A47C60CA2869EED800061D2D;
+			remoteInfo = carnet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A47C60CB2869EED800061D2D /* carnet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carnet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47C60CE2869EED800061D2D /* carnetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetApp.swift; sourceTree = "<group>"; };
+		A47C60D02869EED800061D2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A47C60D22869EEDC00061D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A47C60D52869EEDC00061D2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A47C60DB2869EEDD00061D2D /* carnetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carnetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47C60DF2869EEDD00061D2D /* carnetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetTests.swift; sourceTree = "<group>"; };
+		A47C60E52869EEDD00061D2D /* carnetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carnetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47C60E92869EEDD00061D2D /* carnetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetUITests.swift; sourceTree = "<group>"; };
+		A47C60EB2869EEDD00061D2D /* carnetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A47C60C82869EED800061D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47C60D82869EEDD00061D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47C60E22869EEDD00061D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A47C60C22869EED800061D2D = {
+			isa = PBXGroup;
+			children = (
+				A47C60CD2869EED800061D2D /* carnet */,
+				A47C60DE2869EEDD00061D2D /* carnetTests */,
+				A47C60E82869EEDD00061D2D /* carnetUITests */,
+				A47C60CC2869EED800061D2D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A47C60CC2869EED800061D2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A47C60CB2869EED800061D2D /* carnet.app */,
+				A47C60DB2869EEDD00061D2D /* carnetTests.xctest */,
+				A47C60E52869EEDD00061D2D /* carnetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A47C60CD2869EED800061D2D /* carnet */ = {
+			isa = PBXGroup;
+			children = (
+				A47C60CE2869EED800061D2D /* carnetApp.swift */,
+				A47C60D02869EED800061D2D /* ContentView.swift */,
+				A47C60D22869EEDC00061D2D /* Assets.xcassets */,
+				A47C60D42869EEDC00061D2D /* Preview Content */,
+			);
+			path = carnet;
+			sourceTree = "<group>";
+		};
+		A47C60D42869EEDC00061D2D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A47C60D52869EEDC00061D2D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A47C60DE2869EEDD00061D2D /* carnetTests */ = {
+			isa = PBXGroup;
+			children = (
+				A47C60DF2869EEDD00061D2D /* carnetTests.swift */,
+			);
+			path = carnetTests;
+			sourceTree = "<group>";
+		};
+		A47C60E82869EEDD00061D2D /* carnetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A47C60E92869EEDD00061D2D /* carnetUITests.swift */,
+				A47C60EB2869EEDD00061D2D /* carnetUITestsLaunchTests.swift */,
+			);
+			path = carnetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A47C60CA2869EED800061D2D /* carnet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A47C60EF2869EEDD00061D2D /* Build configuration list for PBXNativeTarget "carnet" */;
+			buildPhases = (
+				A47C60C72869EED800061D2D /* Sources */,
+				A47C60C82869EED800061D2D /* Frameworks */,
+				A47C60C92869EED800061D2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = carnet;
+			productName = carnet;
+			productReference = A47C60CB2869EED800061D2D /* carnet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A47C60DA2869EEDD00061D2D /* carnetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A47C60F22869EEDD00061D2D /* Build configuration list for PBXNativeTarget "carnetTests" */;
+			buildPhases = (
+				A47C60D72869EEDD00061D2D /* Sources */,
+				A47C60D82869EEDD00061D2D /* Frameworks */,
+				A47C60D92869EEDD00061D2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A47C60DD2869EEDD00061D2D /* PBXTargetDependency */,
+			);
+			name = carnetTests;
+			productName = carnetTests;
+			productReference = A47C60DB2869EEDD00061D2D /* carnetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A47C60E42869EEDD00061D2D /* carnetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A47C60F52869EEDD00061D2D /* Build configuration list for PBXNativeTarget "carnetUITests" */;
+			buildPhases = (
+				A47C60E12869EEDD00061D2D /* Sources */,
+				A47C60E22869EEDD00061D2D /* Frameworks */,
+				A47C60E32869EEDD00061D2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A47C60E72869EEDD00061D2D /* PBXTargetDependency */,
+			);
+			name = carnetUITests;
+			productName = carnetUITests;
+			productReference = A47C60E52869EEDD00061D2D /* carnetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A47C60C32869EED800061D2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					A47C60CA2869EED800061D2D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					A47C60DA2869EEDD00061D2D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A47C60CA2869EED800061D2D;
+					};
+					A47C60E42869EEDD00061D2D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A47C60CA2869EED800061D2D;
+					};
+				};
+			};
+			buildConfigurationList = A47C60C62869EED800061D2D /* Build configuration list for PBXProject "carnet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A47C60C22869EED800061D2D;
+			productRefGroup = A47C60CC2869EED800061D2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A47C60CA2869EED800061D2D /* carnet */,
+				A47C60DA2869EEDD00061D2D /* carnetTests */,
+				A47C60E42869EEDD00061D2D /* carnetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A47C60C92869EED800061D2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47C60D62869EEDC00061D2D /* Preview Assets.xcassets in Resources */,
+				A47C60D32869EEDC00061D2D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47C60D92869EEDD00061D2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47C60E32869EEDD00061D2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A47C60C72869EED800061D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47C60D12869EED800061D2D /* ContentView.swift in Sources */,
+				A47C60CF2869EED800061D2D /* carnetApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47C60D72869EEDD00061D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47C60E02869EEDD00061D2D /* carnetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47C60E12869EEDD00061D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47C60EA2869EEDD00061D2D /* carnetUITests.swift in Sources */,
+				A47C60EC2869EEDD00061D2D /* carnetUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A47C60DD2869EEDD00061D2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A47C60CA2869EED800061D2D /* carnet */;
+			targetProxy = A47C60DC2869EEDD00061D2D /* PBXContainerItemProxy */;
+		};
+		A47C60E72869EEDD00061D2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A47C60CA2869EED800061D2D /* carnet */;
+			targetProxy = A47C60E62869EEDD00061D2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A47C60ED2869EEDD00061D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A47C60EE2869EEDD00061D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A47C60F02869EEDD00061D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"carnet/Preview Content\"";
+				DEVELOPMENT_TEAM = YF2YA2NY97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A47C60F12869EEDD00061D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"carnet/Preview Content\"";
+				DEVELOPMENT_TEAM = YF2YA2NY97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A47C60F32869EEDD00061D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF2YA2NY97;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carnet.app/carnet";
+			};
+			name = Debug;
+		};
+		A47C60F42869EEDD00061D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF2YA2NY97;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carnet.app/carnet";
+			};
+			name = Release;
+		};
+		A47C60F62869EEDD00061D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF2YA2NY97;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = carnet;
+			};
+			name = Debug;
+		};
+		A47C60F72869EEDD00061D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF2YA2NY97;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = carnet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A47C60C62869EED800061D2D /* Build configuration list for PBXProject "carnet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A47C60ED2869EEDD00061D2D /* Debug */,
+				A47C60EE2869EEDD00061D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A47C60EF2869EEDD00061D2D /* Build configuration list for PBXNativeTarget "carnet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A47C60F02869EEDD00061D2D /* Debug */,
+				A47C60F12869EEDD00061D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A47C60F22869EEDD00061D2D /* Build configuration list for PBXNativeTarget "carnetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A47C60F32869EEDD00061D2D /* Debug */,
+				A47C60F42869EEDD00061D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A47C60F52869EEDD00061D2D /* Build configuration list for PBXNativeTarget "carnetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A47C60F62869EEDD00061D2D /* Debug */,
+				A47C60F72869EEDD00061D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A47C60C32869EED800061D2D /* Project object */;
+}
