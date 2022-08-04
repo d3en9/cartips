@@ -26,6 +26,7 @@
 		A47C60EA2869EEDD00061D2D /* carnetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47C60E92869EEDD00061D2D /* carnetUITests.swift */; };
 		A47C60EC2869EEDD00061D2D /* carnetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47C60EB2869EEDD00061D2D /* carnetUITestsLaunchTests.swift */; };
 		A47C60FB286A153A00061D2D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47C60FA286A153A00061D2D /* Data.swift */; };
+		A49E4E16289C1AFA00EAE21A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A49E4E15289C14A900EAE21A /* README.md */; };
 		A4A90EA3286F3329003A59BB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A90EA2286F3329003A59BB /* SignUpView.swift */; };
 		A4AE9B342875CC8F00320CD9 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE9B332875CC8F00320CD9 /* AuthToken.swift */; };
 		A4AE9B362875D0E800320CD9 /* authRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE9B352875D0E800320CD9 /* authRequest.swift */; };
@@ -77,7 +78,7 @@
 		A47C60E92869EEDD00061D2D /* carnetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetUITests.swift; sourceTree = "<group>"; };
 		A47C60EB2869EEDD00061D2D /* carnetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A47C60FA286A153A00061D2D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		A49E4E15289C14A900EAE21A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A49E4E15289C14A900EAE21A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A4A90EA2286F3329003A59BB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A4AE9B332875CC8F00320CD9 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
 		A4AE9B352875D0E800320CD9 /* authRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authRequest.swift; sourceTree = "<group>"; };
@@ -328,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49E4E16289C1AFA00EAE21A /* README.md in Resources */,
 				A47C60D62869EEDC00061D2D /* Preview Assets.xcassets in Resources */,
 				A47C60D32869EEDC00061D2D /* Assets.xcassets in Resources */,
 			);
