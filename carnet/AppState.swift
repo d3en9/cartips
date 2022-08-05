@@ -35,23 +35,27 @@ struct Marker: Identifiable {
     
     private var isRefreshed: Bool = false
     
-    func load() {
-        let sema = DispatchSemaphore(value: 0)
-        api.RefreshPublisher()
-            .sink { completion in
-                switch completion {
-                case .failure(let error):
-                    print(error)
-                case .finished:
-                    print("finished")
-                }
-            } receiveValue: { isRefreshed in
-                defer { sema.signal() }
-                self.isRefreshed = isRefreshed
-                
-            }
-            .store(in: &cancelables)
-        sema.wait()
+    func load() async {
+//        let sema = DispatchSemaphore(value: 0)
+//        api.RefreshPublisher()
+//            .sink { completion in
+//                switch completion {
+//                case .failure(let error):
+//                    print(error)
+//                case .finished:
+//                    print("finished")
+//                }
+//            } receiveValue: { isRefreshed in
+//                defer { sema.signal() }
+//                self.isRefreshed = isRefreshed
+//
+//            }
+//            .store(in: &cancelables)
+//        sema.wait()
+        self.driver = .notRequested
+        self.alarmSystem = .notRequested
+        self.replacements = .notRequested
+        self.isRefreshed = await api.refreshToken()
         
         api.GetDriver()
             .sink { completion in
