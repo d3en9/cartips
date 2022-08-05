@@ -9,11 +9,17 @@ import SwiftUI
 
 struct SignInView: View {
     @EnvironmentObject var appState: AppState
-    @Binding var isAuth: Bool
+
     @State var email = ""
     @State var password = ""
     @State var access_token = ""
-    @State var isAuthenticating = false
+    
+    private func isAuthenticating() -> Bool {
+        switch appState.state {
+        case .authenticating: return true
+        default: return false
+        }
+    }
     
     var body : some View{
         
@@ -43,15 +49,19 @@ struct SignInView: View {
                     
                     Button(action: {
                         Task {
-                            isAuthenticating = true
-                            isAuth = await appState.signIn(email: email, password: password)
-                            isAuthenticating = false
+                            appState.state = .authenticating
+                            let authenticated = await appState.signIn(email: email, password: password)
+                            if authenticated {
+                                appState.state = .authenticated
+                            } else {
+                                appState.state = .notAuth(AuthError.networkError)
+                            }
                         }
                     }) {
                         HStack {
                             Text("Войти")
                                 .padding()
-                            if isAuthenticating {
+                            if isAuthenticating() {
                                 ProgressView()
                             }
                         }
@@ -61,6 +71,23 @@ struct SignInView: View {
                         
                     }
                     .cornerRadius(10)
+                    
+                    switch appState.state {
+                    case let .notAuth(error):
+                        if (error != nil) {
+                            HStack{
+                                Spacer()
+                                Text(error!.localizedDescription)
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.red)
+                                Spacer()
+                            }
+                        
+                        }
+                    default: Spacer()
+                    }
+                    
+                    
                     
                 }
                 .padding(.horizontal)
@@ -91,16 +118,16 @@ struct SignInView: View {
         .navigationBarHidden(true)
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("asd")
-        .disabled(isAuthenticating)
+        .disabled(isAuthenticating())
     }
     
 }
 
 struct SignInView_Previews: PreviewProvider {
-    @State static var isAuth = false
     
     static var previews: some View {
-        SignInView(isAuth: $isAuth)
+        SignInView()
             .previewInterfaceOrientation(.portrait)
+            .environmentObject(AppState.Mock())
     }
 }

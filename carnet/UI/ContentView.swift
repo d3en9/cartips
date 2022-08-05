@@ -9,17 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
 //    @State var isAuth = UserDefaults.standard.value(forKey: "isAuth") as? Bool ?? false
-    @State var isAuth = false
     @StateObject private var appState = AppState()
     
     
     var body: some View {
         VStack{
-            if isAuth{
+            switch appState.state {
+            case .authenticated:
                 HomeView()
-            }
-            else{
-                SignInView(isAuth: $isAuth)
+            default:
+                SignInView()
             }
         }
         .environmentObject(appState)
@@ -38,5 +37,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(AppState.Mock())
     }
 }

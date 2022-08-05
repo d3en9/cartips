@@ -71,6 +71,7 @@ let replacementParametersMock = ReplacementParametersResponse(
 extension AppState {
     static func Mock() -> AppState {
         let state = AppState()
+        state.state = MainAppState.notAuth()
         state.driver = .loaded(driverMock)
         state.alarmSystem = .loaded(alarmSystemMock)
         state.replacements = .loaded(replacementParametersMock)

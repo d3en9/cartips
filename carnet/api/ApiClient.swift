@@ -43,6 +43,21 @@ enum APIError: LocalizedError {
     }
 }
 
+enum AuthError: LocalizedError {
+    case networkError
+    
+    case invalidCredentials
+
+    var errorDescription: String? {
+        switch self {
+        case .networkError:
+            return "Ошибка сети, убедитесь что есть подключение к интернету"
+        case .invalidCredentials:
+            return "Неверный логин или пароль"
+        }
+    }
+}
+
 class ApiClient {
     private var currentToken: RefreshTokenResponse?
     // set rest api service base url
@@ -55,7 +70,7 @@ class ApiClient {
         ]
         do {
             let token = try await Send("\(baseApi)/auth/login", method: "POST", parameters: parameters) as AuthToken?
-            if token != nil {
+            if token?.access_token != nil {
                 currentToken = RefreshTokenResponse(access_token: token?.access_token ?? "", refresh_token: token?.refresh_token ?? "")
                 return true
             }
@@ -84,6 +99,23 @@ class ApiClient {
             return false
         }
 
+    }
+    
+    func logout() async -> Bool {
+        if (currentToken?.refresh_token != nil) {
+            let parameters: [String: Any] = [
+                "refresh_token": currentToken?.refresh_token ?? ""
+            ]
+            self.currentToken = nil
+            do {
+                _ = try await Send("\(baseApi)/auth/logout", method: "POST", parameters: parameters) as String?
+                return true
+            }
+            catch {
+                return false
+            }
+        }
+        return true
     }
     
     func refresh() -> AnyPublisher<RefreshTokenResponse, Error> {
@@ -306,7 +338,7 @@ class ApiClient {
 
                     return (data, response)
                 }
-                //.retry(3)
+                .retry(3)
                 .map(\.data)
                 .decode(type: T.self, decoder: JSONDecoder())
                 .receive(on: DispatchQueue.main)

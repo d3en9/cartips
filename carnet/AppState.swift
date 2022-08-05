@@ -15,8 +15,24 @@ struct Marker: Identifiable {
     var location: MapMarker
 }
 
+enum MainAppState {
+
+    case notAuth(AuthError? = nil)
+    case authenticating
+    case authenticated
+    
+    var authError: String? {
+        switch self {
+        case let .notAuth(error): return error?.localizedDescription
+        default: return nil
+        }
+    }
+}
+
 @MainActor class AppState: ObservableObject {
     private let api = ApiClient()
+    
+    @Published var state: MainAppState = .notAuth()
     
     @Published var driver: Loadable<DriverInfo> = .notRequested
     
@@ -55,7 +71,13 @@ struct Marker: Identifiable {
         self.driver = .notRequested
         self.alarmSystem = .notRequested
         self.replacements = .notRequested
-        self.isRefreshed = await api.refreshToken()
+        if (!(await api.refreshToken())) {
+            if !(await api.logout()) {
+                print("can't logout")
+            }
+            self.state = .notAuth()
+            return
+        }
         
         api.GetDriver()
             .sink { completion in
