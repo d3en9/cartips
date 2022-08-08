@@ -22,6 +22,9 @@ struct ContentView: View {
             }
         }
         .environmentObject(appState)
+        .onAppear {
+            appState.loadTokenFromKeychain()
+        }
 //        .animation(.spring().repeatForever(autoreverses: false), value: isAuth)
 //        .onAppear {
 //            NotificationCenter.default.addObserver(forName: NSNotification.Name("isAuthChange"), object: nil, queue: .main) { (_) in

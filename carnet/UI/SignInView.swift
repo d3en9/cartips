@@ -50,12 +50,20 @@ struct SignInView: View {
                     Button(action: {
                         Task {
                             appState.state = .authenticating
-                            let authenticated = await appState.signIn(email: email, password: password)
-                            if authenticated {
+                            do {
+                                try await appState.signIn(email: email, password: password)
                                 appState.state = .authenticated
-                            } else {
-                                appState.state = .notAuth(AuthError.networkError)
+                                appState.saveTokenInKeychain()
+                                
                             }
+                            catch let error where error is AuthError {
+                                appState.state = .notAuth(error as? AuthError)
+                            }
+                            catch {
+                                appState.state = .notAuth(.unexpectedError)
+                            }
+                            
+                            
                         }
                     }) {
                         HStack {

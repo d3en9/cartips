@@ -12,6 +12,7 @@
 		A401D78F2881AB9200C86782 /* ReplacementParametersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D78E2881AB9200C86782 /* ReplacementParametersResponse.swift */; };
 		A401D7932881BB9800C86782 /* ReplacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D7922881BB9800C86782 /* ReplacementView.swift */; };
 		A442D8C8287878A800DDFF78 /* DriverInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442D8C7287878A800DDFF78 /* DriverInfo.swift */; };
+		A44927BA28A15CCE00B95398 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44927B928A15CCE00B95398 /* KeychainHelper.swift */; };
 		A46CCF54288710A0004470DA /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CCF53288710A0004470DA /* AlarmView.swift */; };
 		A46CCF56288710FE004470DA /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CCF55288710FE004470DA /* UserView.swift */; };
 		A46CCF58288711DB004470DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CCF57288711DB004470DA /* Constants.swift */; };
@@ -62,6 +63,7 @@
 		A401D78E2881AB9200C86782 /* ReplacementParametersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplacementParametersResponse.swift; sourceTree = "<group>"; };
 		A401D7922881BB9800C86782 /* ReplacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplacementView.swift; sourceTree = "<group>"; };
 		A442D8C7287878A800DDFF78 /* DriverInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfo.swift; sourceTree = "<group>"; };
+		A44927B928A15CCE00B95398 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		A46CCF53288710A0004470DA /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
 		A46CCF55288710FE004470DA /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A46CCF57288711DB004470DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				A401D78C2881960A00C86782 /* UserDefaultsutils.swift */,
 				A472716D2889C6B2002AC1AC /* Loadable.swift */,
 				A472716F2889C717002AC1AC /* CancelBag.swift */,
+				A44927B928A15CCE00B95398 /* KeychainHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				A47271702889C717002AC1AC /* CancelBag.swift in Sources */,
 				A47C60D12869EED800061D2D /* SignInView.swift in Sources */,
 				A4AE9B342875CC8F00320CD9 /* AuthToken.swift in Sources */,
+				A44927BA28A15CCE00B95398 /* KeychainHelper.swift in Sources */,
 				A4B253F72870306200C94ACF /* AboutView.swift in Sources */,
 				A442D8C8287878A800DDFF78 /* DriverInfo.swift in Sources */,
 				A4B253F32870288300C94ACF /* ContentView.swift in Sources */,

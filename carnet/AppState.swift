@@ -79,6 +79,8 @@ enum MainAppState {
             return
         }
         
+        self.saveTokenInKeychain()
+        
         api.GetDriver()
             .sink { completion in
                 switch completion {
@@ -130,8 +132,37 @@ enum MainAppState {
         self.cancelables.removeAll()
     }
     
-    func signIn(email: String, password: String) async -> Bool {
-        await api.auth(email, password)
+    func signIn(email: String, password: String) async throws {
+        try await api.auth(email, password)
     }
     
+    var token: RefreshTokenResponse? {
+        get {
+            api.currentToken
+        }
+    }
+    
+    func saveTokenInKeychain() {
+        if self.token != nil {
+            KeychainHelper.standard.save(self.token,
+                                         service: Constants.TOKEN_SERVICE_NAME, account: Constants.ACCOUNT_NAME)
+        }
+    }
+    
+    func loadTokenFromKeychain() {
+        let token = KeychainHelper.standard.read(service: Constants.TOKEN_SERVICE_NAME, account: Constants.ACCOUNT_NAME,
+                                                 type: RefreshTokenResponse.self)
+        api.currentToken = token
+        if api.currentToken?.access_token != nil {
+            self.state = .authenticated
+        }
+    }
+    
+    func logout() async {
+        if !(await api.logout()) {
+            print("can't logout")
+        }
+        KeychainHelper.standard.delete(service: Constants.TOKEN_SERVICE_NAME, account: Constants.ACCOUNT_NAME)
+        self.state = .notAuth()
+    }
 }

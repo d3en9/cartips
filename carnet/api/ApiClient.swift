@@ -48,22 +48,26 @@ enum AuthError: LocalizedError {
     
     case invalidCredentials
 
+    case unexpectedError
+    
     var errorDescription: String? {
         switch self {
         case .networkError:
             return "Ошибка сети, убедитесь что есть подключение к интернету"
         case .invalidCredentials:
             return "Неверный логин или пароль"
+        case .unexpectedError:
+            return "Неизвестная ошибка"
         }
     }
 }
 
 class ApiClient {
-    private var currentToken: RefreshTokenResponse?
+    var currentToken: RefreshTokenResponse?
     // set rest api service base url
-    let baseApi = ""
+    let baseApi = "https://api.car2net.ru"
     
-    func auth(_ email: String, _ password: String) async -> Bool {
+    func auth(_ email: String, _ password: String) async throws {
         let parameters: [String: Any] = [
             "email": email,
             "password": password
@@ -72,12 +76,13 @@ class ApiClient {
             let token = try await Send("\(baseApi)/auth/login", method: "POST", parameters: parameters) as AuthToken?
             if token?.access_token != nil {
                 currentToken = RefreshTokenResponse(access_token: token?.access_token ?? "", refresh_token: token?.refresh_token ?? "")
-                return true
+            } else {
+                throw AuthError.unexpectedError
             }
-            return false
+            
         }
-        catch {
-            return false
+        catch let error{
+            throw error
         }
     }
     
@@ -199,13 +204,20 @@ class ApiClient {
             if parameters != nil {
                 payload = try JSONSerialization.data(withJSONObject: parameters!, options: .prettyPrinted)
             }
-            let (data, _) = try await URLSession.shared.upload(for: request, from: payload)
-            print(data.debugDescription)
+            let (data, response) = try await URLSession.shared.upload(for: request, from: payload)
+            if let httpResponse = response as? HTTPURLResponse{
+                if httpResponse.statusCode == 401{
+                    throw AuthError.invalidCredentials
+                }
+                if (httpResponse.statusCode != 200) {
+                    throw AuthError.networkError
+                }
+            }
             let info = try JSONDecoder().decode(T.self, from: data)
             return info
         } catch let error {
             print(error.localizedDescription)
-            return nil
+            throw error
         }
     }
     
