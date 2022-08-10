@@ -17,7 +17,6 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            
             ScrollView {
                 VStack{
                     PullToRefresh(coordinateSpaceName: "pullToRefresh") {
@@ -214,12 +213,10 @@ struct HomeView: View {
                 .background(Color.BackgroundColor)
                 .navigationBarHidden(true)
                 .navigationBarTitleDisplayMode(.inline)
-        
+                .padding(2)
             }
             .coordinateSpace(name: "pullToRefresh")
-            
-            
-        
+            .background(Color.BackgroundColor)
         }
         
         .onAppear {
@@ -228,7 +225,7 @@ struct HomeView: View {
             }
 //            appState.load()
         }
-        .padding()
+        .padding(13)
         .background(Color.BackgroundColor)
     }
     

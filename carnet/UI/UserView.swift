@@ -10,6 +10,7 @@ import SwiftUI
 struct UserListItemView: View {
     var title: String
     var value: String
+    var devider: Bool = true
     
     var body: some View {
         VStack{
@@ -25,16 +26,18 @@ struct UserListItemView: View {
                     .font(.system(size: 21))
                 Spacer()
             }
-            Divider()
+            if devider {
+                Divider()
+            }
         }
-        .padding(0)
         .background(Color.BackgroundColorList)
-        .cornerRadius(10)
+        
     }
 }
 
 struct UserView: View {
     @EnvironmentObject var appState: AppState
+    @Environment(\.presentationMode) var presentation
     
     var body: some View {
         ScrollView() {
@@ -56,18 +59,23 @@ struct UserView: View {
                         Text("Автомобиль")
                         Spacer()
                     }
-                    .padding(.top, 40)
-                    Divider()
-                    VStack{
-                        UserListItemView(title: "Госномер", value: driver.auto.main_info.state_number)
-                        UserListItemView(title: "СТС", value: driver.auto.main_info.vrc_number)
-                        UserListItemView(title: "VIN номер", value: driver.auto.main_info.vin_number)
-                        UserListItemView(title: "Модель", value: driver.auto.main_info.model)
-                        UserListItemView(title: "Год выпуска", value: String(driver.auto.main_info.release_year))
-                        UserListItemView(title: "Цвет", value: driver.auto.main_info.color)
-                        
+                    .padding(.top, 20)
+                    
+                    Group{
+                        VStack{
+                            UserListItemView(title: "Госномер", value: driver.auto.main_info.state_number)
+                            UserListItemView(title: "СТС", value: driver.auto.main_info.vrc_number)
+                            UserListItemView(title: "VIN номер", value: driver.auto.main_info.vin_number)
+                            UserListItemView(title: "Модель", value: driver.auto.main_info.model)
+                            UserListItemView(title: "Год выпуска", value: String(driver.auto.main_info.release_year))
+                            UserListItemView(title: "Цвет", value: driver.auto.main_info.color, devider: false)
+                            
+                        }
+                        .padding()
+                        .background(Color.BackgroundColorList)
                     }
-                    .background(Color.BackgroundColorList)
+                    .cornerRadius(10)
+                    .shadow(color: .gray, radius: 1, x: 0, y: 0)
                     
                     
                     HStack {
@@ -75,17 +83,24 @@ struct UserView: View {
                         Spacer()
                     }
                     .padding(.top, 24)
-                    VStack{
-                        UserListItemView(title: "Любимый автосервис", value: driver.favorite_autoservice.autoservice_name)
+                    Group {
+                        VStack{
+                            UserListItemView(title: "Любимый автосервис", value: driver.favorite_autoservice.autoservice_name,
+                                devider: false
+                            )
+                        }
+                        .padding()
+                        .background(Color.BackgroundColorList)
                     }
-                    .background(Color.BackgroundColor)
-                    .frame(minHeight: 100, maxHeight: 100)
+                    .cornerRadius(10)
+                    .shadow(color: .gray, radius: 1, x: 0, y: 0)
                     Spacer()
                     Button(action: {
                         
                     }) {
                         NavigationLink(destination: AboutView()) {
                             Text("О приложении")
+                                .padding(20)
                         }
                     }.foregroundColor(.blue)
                 case _:
@@ -95,7 +110,7 @@ struct UserView: View {
             }
             
             .background(Color.BackgroundColor)
-            .navigationTitle("Профиль")
+            //.navigationTitle("Профиль")
             .toolbar {
                 Button(action: {
                     Task {
@@ -106,11 +121,12 @@ struct UserView: View {
                         .renderingMode(.template)
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
             .padding()
             
         }
-        
+        .background(Color.BackgroundColor)
+        .navigationBarTitle("Профиль")
+        .navigationBarTitleDisplayMode(.inline)
     }
         
 }
