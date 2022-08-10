@@ -88,7 +88,6 @@ struct UserView: View {
                             Text("О приложении")
                         }
                     }.foregroundColor(.blue)
-                        .disabled(true)
                 case _:
                     ProgressView()
                 }

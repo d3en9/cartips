@@ -116,7 +116,7 @@ struct SignInView: View {
                             Text("О приложении")
                         }
                     }.foregroundColor(.blue)
-                        .disabled(true)
+                        //.disabled(true)
                     
                 }
                 Spacer()
@@ -125,7 +125,7 @@ struct SignInView: View {
         }
         .navigationBarHidden(true)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle("asd")
+        .navigationTitle("")
         .disabled(isAuthenticating())
     }
     

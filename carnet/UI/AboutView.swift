@@ -9,11 +9,11 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        NavigationView{
-            Button(action: {
-                
-            }) {
-                Text("Политика конфиденциальности")
+        VStack {
+            List {
+                NavigationLink(destination: ConfidentialView()) {
+                    Text("Политика конфиденциальности")
+                }
             }
         }
         .navigationTitle("Условия пользования")

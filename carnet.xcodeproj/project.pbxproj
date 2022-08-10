@@ -37,6 +37,7 @@
 		A4B253F52870296800C94ACF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B253F42870296800C94ACF /* HomeView.swift */; };
 		A4B253F72870306200C94ACF /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B253F62870306200C94ACF /* AboutView.swift */; };
 		A4CCB0BC287D756D009437C1 /* AlarmSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CCB0BB287D756D009437C1 /* AlarmSystem.swift */; };
+		A4F0302F28A3B81200414411 /* ConfidentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0302E28A3B81200414411 /* ConfidentialView.swift */; };
 		A4FE218D288832180037D49C /* BadRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE218C288832180037D49C /* BadRequestResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		A4B253F42870296800C94ACF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A4B253F62870306200C94ACF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		A4CCB0BB287D756D009437C1 /* AlarmSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSystem.swift; sourceTree = "<group>"; };
+		A4F0302D28A3B55E00414411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A4F0302E28A3B81200414411 /* ConfidentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfidentialView.swift; sourceTree = "<group>"; };
 		A4FE218C288832180037D49C /* BadRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadRequestResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +154,7 @@
 				A46CCF55288710FE004470DA /* UserView.swift */,
 				A4A90EA2286F3329003A59BB /* SignUpView.swift */,
 				A4A658C3289D403200C54B65 /* PullToRefreshView.swift */,
+				A4F0302E28A3B81200414411 /* ConfidentialView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -179,6 +183,7 @@
 		A47C60CD2869EED800061D2D /* carnet */ = {
 			isa = PBXGroup;
 			children = (
+				A4F0302D28A3B55E00414411 /* Info.plist */,
 				A46CCF5028871080004470DA /* UI */,
 				A401D7892881916B00C86782 /* Utils */,
 				A401D7862881901F00C86782 /* Extensions */,
@@ -316,7 +321,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = A47C60C22869EED800061D2D;
 			productRefGroup = A47C60CC2869EED800061D2D /* Products */;
@@ -364,6 +369,7 @@
 			files = (
 				A47271702889C717002AC1AC /* CancelBag.swift in Sources */,
 				A47C60D12869EED800061D2D /* SignInView.swift in Sources */,
+				A4F0302F28A3B81200414411 /* ConfidentialView.swift in Sources */,
 				A4AE9B342875CC8F00320CD9 /* AuthToken.swift in Sources */,
 				A44927BA28A15CCE00B95398 /* KeychainHelper.swift in Sources */,
 				A4B253F72870306200C94ACF /* AboutView.swift in Sources */,
@@ -474,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -529,7 +535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -551,9 +557,9 @@
 				DEVELOPMENT_TEAM = YF2YA2NY97;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = carnet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -563,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnet;
+				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnet1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -583,9 +589,9 @@
 				DEVELOPMENT_TEAM = YF2YA2NY97;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = carnet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -595,7 +601,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnet;
+				PRODUCT_BUNDLE_IDENTIFIER = mahlidze.carnet1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
